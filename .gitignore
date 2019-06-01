@@ -1,0 +1,7 @@
+# Extensions
+*.vscode
+*.code-workspace
+
+# Directories
+/node_modules
+/public
