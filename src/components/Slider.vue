@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import styles from '@/assets/variables.scss';
-import utilities from '@/js/utilities';
+import styles from '@/assets/variables.scss'
+import utilities from '@/js/utilities'
 export default {
   name: 'slider',
   props: {
@@ -52,56 +52,56 @@ export default {
       styles: styles
     }
   },
-  mounted (){
-    this.init();
+  mounted () {
+    this.init()
   },
   methods: {
     init () {
       if (this.direction === 'right') {
-        this.setRightMenu();
+        this.setRightMenu()
       } else {
-        this.setLeftMenu();
+        this.setLeftMenu()
       }
     },
     setLeftMenu () {
-      this.$refs.slider.style.left = "0";
-      this.$refs.menuIcon.style.float = "left";
+      this.$refs.slider.style.left = '0'
+      this.$refs.menuIcon.style.float = 'left'
     },
     setRightMenu () {
-      this.$refs.slider.style.right = "0";
-      this.$refs.menuIcon.style.float = "right";
+      this.$refs.slider.style.right = '0'
+      this.$refs.menuIcon.style.float = 'right'
     },
     openMenu () {
       if (this.opacity) {
-        document.body.style.backgroundColor = utilities.hexToRGB(styles['background-color'], this.opacity);
+        document.body.style.backgroundColor = utilities.hexToRGB(styles['background-color'], this.opacity)
       }
       switch (this.format) {
         case 'push':
-          const width = this.width.toString() + "px";
-          this.$refs.slider.style.width = width;
+          const width = this.width.toString() + 'px'
+          this.$refs.slider.style.width = width
           let parentRefStyle = this.$parent.$refs.app.style
           if (this.direction === 'right') {
             parentRefStyle.marginRight = width
-            parentRefStyle.transition = "margin-right .5s";
+            parentRefStyle.transition = 'margin-right .5s'
           } else {
             parentRefStyle.marginLeft = width
-            parentRefStyle.transition = "margin-left .5s";
+            parentRefStyle.transition = 'margin-left .5s'
           }
-          break;
+          break
         case 'full':
-          this.$refs.slider.style.width = "100%";
-          break;
+          this.$refs.slider.style.width = '100%'
+          break
         default:
-          this.$refs.slider.style.width = this.width.toString() + "px";
-          break;
+          this.$refs.slider.style.width = this.width.toString() + 'px'
+          break
       }
     },
     closeMenu () {
-      this.$refs.slider.style.width = "0";
-      this.$parent.$refs.app.style.marginLeft = "0";
-      this.$parent.$refs.app.style.marginRight = "0";
+      this.$refs.slider.style.width = '0'
+      this.$parent.$refs.app.style.marginLeft = '0'
+      this.$parent.$refs.app.style.marginRight = '0'
       if (this.opacity) {
-        document.body.style.backgroundColor = styles['background-color'];
+        document.body.style.backgroundColor = styles['background-color']
       }
     }
   }

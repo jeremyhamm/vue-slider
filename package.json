@@ -1,7 +1,20 @@
 {
   "name": "@jeremyhamm/vue-slider",
-  "version": "0.1.1",
-  "private": false,
+  "version": "0.1.0",
+  "author": "jeremy@jeremyhamm.dev",
+  "description": "A horizontal slide menu for Vue JS 2+",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-component",
+    "component",
+    "slider"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jeremyhamm/vue-slider",
+  "bugs": {
+    "url": "https://github.com/jeremyhamm/vue-slider/issues"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
