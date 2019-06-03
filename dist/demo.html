@@ -1,8 +1,19 @@
 <meta charset="utf-8">
-<title>vue-slider demo</title>
+<title>@jeremyhamm/vue-slider demo</title>
 <script src="https://unpkg.com/vue"></script>
-<script src="./vue-slider.js"></script>
+<script src="./@jeremyhamm/vue-slider.umd.js"></script>
+
+<link rel="stylesheet" href="./@jeremyhamm/vue-slider.css">
 
 
-<vue-slider></vue-slider>
+<div id="app">
+  <demo></demo>
+</div>
 
+<script>
+new Vue({
+  components: {
+    demo: @jeremyhamm/vue-slider
+  }
+}).$mount('#app')
+</script>
