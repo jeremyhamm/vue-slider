@@ -25,7 +25,7 @@
 #### Mount with global
  ```javascript
 import Vue from 'vue'
-import Slider from './components/Slider'
+import Slider from '@jeremyhamm/vue-slider'
 
 Vue.use(Slider)
 ```
@@ -33,7 +33,7 @@ Vue.use(Slider)
 #### Mount with component
 ```javascript
 
-import Slider from './components/Slider'
+import Slider from '@jeremyhamm/vue-slider'
 
 export default {
   components: {
