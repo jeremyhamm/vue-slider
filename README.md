@@ -52,9 +52,9 @@ export default {
 * In order to use `full` mode the parent element needs to contain `ref="app"`
 
 #### Properties
-| Name      | Type   | Default | Options             |
-| ---       |---     | ---     | ---                 |
-| width     | Number | 300     | Width in pixels     |
-| format    | String | overlay | push, full, overlay |
-| direction | String | left    | left, right         |
-| opacity   | Number | 0       | 0.00 - 1.00         |
+| Name      | Type     | Default   | Options                |
+| ---       |---       | ---       | ---                    |
+| width     | `Number` | `300`     | Menu Width `(px)`      |
+| format    | `String` | `overlay` | `push, full, overlay`  |
+| direction | `String` | `left`    | `left, right`          |
+| opacity   | `Number` | `0`       | `0.00 - 1.00` Representing [css opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)        |
