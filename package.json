@@ -15,10 +15,11 @@
   "bugs": {
     "url": "https://github.com/jeremyhamm/vue-slider/issues"
   },
+  "main": "dist/vue-slider.umd.js",
+  "unpkg": "dist/vue-slider.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name vue-slider ./src/main.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
