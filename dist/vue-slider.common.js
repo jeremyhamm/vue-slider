@@ -571,14 +571,6 @@ if (__webpack_require__("79e5")(function () { return $toString.call({ source: 'a
 
 /***/ }),
 
-/***/ "7133":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"background-color":"#FFFFFF","menu-icon-color":"#999999"};
-
-/***/ }),
-
 /***/ "7726":
 /***/ (function(module, exports) {
 
@@ -617,6 +609,14 @@ module.exports = function (exec) {
   }
 };
 
+
+/***/ }),
+
+/***/ "7f91":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"background-color":"#FFFFFF","menu-icon-color":"#999999"};
 
 /***/ }),
 
@@ -1078,19 +1078,19 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2250739a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=73557572&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d27fcb5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=73557572&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"app",attrs:{"id":"app"}},[_c('slider',{attrs:{"width":300,"format":"push","direction":"left","opacity":0.15}})],1)}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=73557572&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2250739a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Slider.vue?vue&type=template&id=6f36ebce&
-var Slidervue_type_template_id_6f36ebce_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{ref:"slider",staticClass:"sidenav"},[_c('a',{staticClass:"closebtn",attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.closeMenu()}}},[_vm._v("×")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 1")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 2")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 3")])]),_c('nav',{ref:"menuIcon",staticClass:"topnav"},[_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.openMenu()}}},[_c('svg',{attrs:{"width":"30","height":"30","id":"icoOpen"}},[_c('path',{attrs:{"d":"M0,5 30,5","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}}),_c('path',{attrs:{"d":"M0,14 30,14","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}}),_c('path',{attrs:{"d":"M0,23 30,23","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}})])])])])}
-var Slidervue_type_template_id_6f36ebce_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d27fcb5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Slider.vue?vue&type=template&id=148fc3b6&
+var Slidervue_type_template_id_148fc3b6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{ref:"slider",staticClass:"sidenav"},[_c('a',{staticClass:"closebtn",attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.closeMenu()}}},[_vm._v("×")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 1")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 2")]),_c('a',{attrs:{"href":"javascript:void(0)"}},[_vm._v("Link 3")])]),_c('nav',{ref:"menuIcon",staticClass:"topnav"},[_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.openMenu()}}},[_c('svg',{attrs:{"width":"30","height":"30","id":"icoOpen"}},[_c('path',{attrs:{"d":"M0,5 30,5","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}}),_c('path',{attrs:{"d":"M0,14 30,14","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}}),_c('path',{attrs:{"d":"M0,23 30,23","stroke":_vm.styles['menu-icon-color'],"stroke-width":"5"}})])])])])}
+var Slidervue_type_template_id_148fc3b6_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Slider.vue?vue&type=template&id=6f36ebce&
+// CONCATENATED MODULE: ./src/components/Slider.vue?vue&type=template&id=148fc3b6&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
@@ -1098,8 +1098,8 @@ var es6_regexp_to_string = __webpack_require__("6b54");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
 var es6_number_constructor = __webpack_require__("c5f6");
 
-// EXTERNAL MODULE: ./src/assets/variables.scss
-var variables = __webpack_require__("7133");
+// EXTERNAL MODULE: ./src/assets/sass/variables.scss
+var variables = __webpack_require__("7f91");
 var variables_default = /*#__PURE__*/__webpack_require__.n(variables);
 
 // CONCATENATED MODULE: ./src/js/utilities.js
@@ -1357,8 +1357,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_Slidervue_type_script_lang_js_,
-  Slidervue_type_template_id_6f36ebce_render,
-  Slidervue_type_template_id_6f36ebce_staticRenderFns,
+  Slidervue_type_template_id_148fc3b6_render,
+  Slidervue_type_template_id_148fc3b6_staticRenderFns,
   false,
   null,
   null,

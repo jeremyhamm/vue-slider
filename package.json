@@ -15,8 +15,12 @@
   "bugs": {
     "url": "https://github.com/jeremyhamm/vue-slider/issues"
   },
-  "main": "dist/vue-slider.umd.js",
+  "main": "dist/vue-slider.common.js",
   "unpkg": "dist/vue-slider.min.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
