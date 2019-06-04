@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+# Vue Slider 
 
-You can use the [editor on GitHub](https://github.com/jeremyhamm/vue-slider/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+> A customizable horizontal slide menu for VueJs 2+
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Demo Image](https://jeremyhamm.github.io/vue-slider/demo/demo.gif)
 
-### Markdown
+***
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Installation
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+##### NPM
+```
+  npm install vue-slider --save
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Browser
+```html
+<script src="https://unpkg.com/vue-slider"></script>
+```
 
-### Jekyll Themes
+***
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jeremyhamm/vue-slider/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Useage
 
-### Support or Contact
+#### Mount with global
+ ```javascript
+import Vue from 'vue'
+import Slider from './components/Slider'
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Vue.use(Slider)
+```
+
+#### Mount with component
+```javascript
+
+import Slider from './components/Slider'
+
+export default {
+  components: {
+    'slider': Slider
+  }
+}
+```
+
+#### Use in component
+```html
+<div id="app" ref="app">
+  <slider :width="300" format="push" direction="left" :opacity="0.15"></slider>
+</div>
+```
+**_Important_**
+* In order to use `full` mode the parent element needs to contain `ref="app"`
+
+#### Properties
+| Name      | Type   | Default | Options             |
+| ---       |---     | ---     | ---                 |
+| width     | Number | 300     | Width in pixels     |
+| format    | String | overlay | push, full, overlay |
+| direction | String | left    | left, right         |
+| opacity   | Number | 0       | 0.00 - 1.00         |
