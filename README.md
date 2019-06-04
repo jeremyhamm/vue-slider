@@ -10,7 +10,7 @@
 
 ##### NPM
 ```
-  npm install vue-slider --save
+  npm i @jeremyhamm/vue-slider
 ```
 
 #### Browser
