@@ -1,7 +1,11 @@
 {
   "name": "@jeremyhamm/vue-slider",
-  "version": "0.1.3",
-  "author": "jeremy@jeremyhamm.dev",
+  "version": "0.1.4",
+  "private": false,
+  "author": {
+    "name": "Jeremy Hamm",
+    "email": "jeremy@jeremyhamm.dev"
+  },
   "description": "A horizontal slide menu for Vue JS 2+",
   "keywords": [
     "vue",
