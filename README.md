@@ -15,7 +15,7 @@
 
 #### Browser
 ```html
-<script src="https://unpkg.com/vue-slider"></script>
+<script src="https://unpkg.com/@jeremyhamm/vue-slider"></script>
 ```
 
 ***
