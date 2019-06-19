@@ -115,20 +115,17 @@ export default {
     background-color: $background-color;
     transition: background-color .5s;
   }
-
-  /* The side navigation menu */
   .sidenav {
     font-family: $font-family-sans-serif;
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     background-color: $menu-background;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    /* Menu Links */
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
     a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
@@ -140,7 +137,6 @@ export default {
         color: $menu-text-hover;
       }
     }
-    /* Position and style the close button (top right corner) */
     .closebtn {
       position: absolute;
       top: 0;
@@ -149,15 +145,11 @@ export default {
       margin-left: 50px;
     }
   }
-
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #app {
     transition: margin-left .5s;
     transition: margin-right .5s;
     padding: 20px;
   }
-
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {
       padding-top: 15px;
