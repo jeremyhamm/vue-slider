@@ -1,6 +1,6 @@
 {
   "name": "@jeremyhamm/vue-slider",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "author": {
     "name": "Jeremy Hamm",
@@ -19,15 +19,15 @@
   "bugs": {
     "url": "https://github.com/jeremyhamm/vue-slider/issues"
   },
-  "main": "dist/vue-slider.common.js",
-  "unpkg": "dist/vue-slider.min.js",
+  "main": "dist/@jeremyhamm/vue-slider.common.js",
+  "unpkg": "dist/@jeremyhamm/vue-slider.umd.min.js",
   "files": [
     "dist/*",
     "src/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode production --dest dist --target lib --dashboard",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
