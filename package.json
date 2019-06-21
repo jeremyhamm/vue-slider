@@ -19,8 +19,8 @@
   "bugs": {
     "url": "https://github.com/jeremyhamm/vue-slider/issues"
   },
-  "main": "dist/@jeremyhamm/vue-slider.common.js",
-  "unpkg": "dist/@jeremyhamm/vue-slider.umd.min.js",
+  "main": "dist/vue-slider.common.js",
+  "unpkg": "dist/vue-slider.umd.min.js",
   "files": [
     "dist/*"
   ],
