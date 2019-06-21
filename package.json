@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --mode production --dest dist --target lib --dashboard",
+    "build": "vue-cli-service build --target lib --name vue-slider ./src/components/Slider.vue",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
