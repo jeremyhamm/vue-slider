@@ -44,12 +44,8 @@ export default {
 
 #### Use in component
 ```html
-<div id="app" ref="app">
-  <slider :width="300" format="push" direction="left" :opacity="0.15"></slider>
-</div>
+ <slider :width="300" format="push" direction="left" :opacity="0.15"></slider>
 ```
-**_Important_**
-* In order to use `full` mode the parent element needs to contain `ref="app"`
 
 #### Properties
 | Name      | Type     | Default   | Options                |
@@ -58,3 +54,7 @@ export default {
 | format    | `String` | `overlay` | `push, full, overlay`  |
 | direction | `String` | `left`    | `left, right`          |
 | opacity   | `Number` | `0`       | `0.00 - 1.00` Representing [css opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)        |
+| links     | `Array`  | null      | `[{'id': 1, 'text': 'Link 1', 'url': 'https://github.com'}, {'id': 2, 'text': 'Link 2', 'url': 'https://github.com'}]` |
+
+#### Styles
+All menu styles can be updated in `/assets/sass/variables.scss`
