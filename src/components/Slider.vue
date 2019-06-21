@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Nav Links -->
-    <div ref="slider" class="sidenav" :style="direction === 'right' ? {'right': 0} : {'left': 0}">
+    <div ref="slider" class="navMenu" :style="menuDirection">
       <a href="javascript:void(0)" class="closebtn" @click="closeMenu()">&times;</a>
       <a href="javascript:void(0)">Link 1</a>
       <a href="javascript:void(0)">Link 2</a>
       <a href="javascript:void(0)">Link 3</a>
     </div>
     <!-- Hamburger Menu -->
-    <nav ref="menuIcon" class="topnav" :style="direction === 'right' ? {'float': 'right'} : {'float': 'left'}">
+    <nav ref="menuIcon" class="navIcon" :style="iconDirection">
       <a href="javascript:void(0)" @click="openMenu()">
         <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
@@ -50,6 +50,14 @@ export default {
   data () {
     return {
       styles: styles
+    }
+  },
+  computed: {
+    menuDirection () {
+      return this.direction === 'right' ? { 'right': 0 } : { 'left': 0 }
+    },
+    iconDirection () {
+      return this.direction === 'right' ? { 'float': 'right' } : { 'float': 'left' }
     }
   },
   methods: {
@@ -102,7 +110,7 @@ export default {
     transition: margin-right .5s;
     padding: 20px;
   }
-  .sidenav {
+  .navMenu {
     font-family: $font-family-sans-serif;
     height: 100%;
     width: 0;
@@ -133,7 +141,7 @@ export default {
     }
   }
   @media screen and (max-height: 450px) {
-    .sidenav {
+    .navMenu {
       padding-top: 15px;
       a {
         font-size: 18px;
