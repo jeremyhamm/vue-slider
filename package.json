@@ -1,6 +1,6 @@
 {
   "name": "@jeremyhamm/vue-slider",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": false,
   "author": {
     "name": "Jeremy Hamm",
@@ -22,8 +22,7 @@
   "main": "dist/@jeremyhamm/vue-slider.common.js",
   "unpkg": "dist/@jeremyhamm/vue-slider.umd.min.js",
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
