@@ -52,20 +52,20 @@ export default {
   data () {
     return {
       styles: styles,
-      menuWidth: { 
-        'width': 0 
+      menuWidth: {
+        'width': 0
       }
     }
   },
   computed: {
     menuDirection () {
-      return this.direction === 'right' ? { 'right': 0} : { 'left': 0}
+      return this.direction === 'right' ? { 'right': 0 } : { 'left': 0 }
     },
     iconDirection () {
       return this.direction === 'right' ? { 'float': 'right' } : { 'float': 'left' }
     },
     app () {
-      return document.getElementById('app');
+      return document.getElementById('app')
     }
   },
   methods: {
