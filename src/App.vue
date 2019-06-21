@@ -4,12 +4,8 @@
 </template>
 
 <script>
-import Slider from './components/Slider'
 export default {
-  name: 'app',
-  components: {
-    'slider': Slider
-  }
+  name: 'app'
 }
 </script>
 
