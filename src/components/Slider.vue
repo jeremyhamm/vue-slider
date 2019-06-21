@@ -3,9 +3,7 @@
     <!-- Nav Links -->
     <div ref="slider" class="navMenu" :style="[menuDirection, menuWidth]">
       <a href="javascript:void(0)" class="closebtn" @click="closeMenu()">&times;</a>
-      <a href="javascript:void(0)">Link 1</a>
-      <a href="javascript:void(0)">Link 2</a>
-      <a href="javascript:void(0)">Link 3</a>
+      <a v-for="link in links" :key="link.id" :href="link.url">{{ link.text }}</a>
     </div>
     <!-- Hamburger Menu -->
     <nav ref="menuIcon" class="navIcon" :style="iconDirection">
