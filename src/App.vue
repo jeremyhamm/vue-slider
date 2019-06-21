@@ -1,10 +1,11 @@
 <template>
-  <div id="app" ref="app">
+  <div id="app">
     <slider
       :width="300"
       format="push"
       direction="left"
       :opacity="0.15"
+      :links="[]"
     >
     </slider>
   </div>

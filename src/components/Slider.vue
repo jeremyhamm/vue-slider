@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Nav Links -->
-    <div ref="slider" class="navMenu" :style="menuDirection">
+    <div ref="slider" class="navMenu" :style="[menuDirection, menuWidth]">
       <a href="javascript:void(0)" class="closebtn" @click="closeMenu()">&times;</a>
       <a href="javascript:void(0)">Link 1</a>
       <a href="javascript:void(0)">Link 2</a>
@@ -45,19 +45,29 @@ export default {
       type: Number,
       required: false,
       default: 0
+    },
+    links: {
+      type: Array,
+      required: true
     }
   },
   data () {
     return {
-      styles: styles
+      styles: styles,
+      menuWidth: { 
+        'width': 0 
+      }
     }
   },
   computed: {
     menuDirection () {
-      return this.direction === 'right' ? { 'right': 0 } : { 'left': 0 }
+      return this.direction === 'right' ? { 'right': 0} : { 'left': 0}
     },
     iconDirection () {
       return this.direction === 'right' ? { 'float': 'right' } : { 'float': 'left' }
+    },
+    app () {
+      return document.getElementById('app');
     }
   },
   methods: {
@@ -65,31 +75,29 @@ export default {
       if (this.opacity) {
         document.body.style.backgroundColor = utilities.hexToRGB(styles['background-color'], this.opacity)
       }
-      switch (this.format) {
-        case 'push':
-          const width = this.width.toString() + 'px'
-          this.$refs.slider.style.width = width
-          let parentRefStyle = this.$parent.$refs.app.style
-          if (this.direction === 'right') {
-            parentRefStyle.marginRight = width
-            parentRefStyle.transition = 'margin-right .5s'
-          } else {
-            parentRefStyle.marginLeft = width
-            parentRefStyle.transition = 'margin-left .5s'
-          }
-          break
-        case 'full':
-          this.$refs.slider.style.width = '100%'
-          break
-        default:
-          this.$refs.slider.style.width = this.width.toString() + 'px'
-          break
+      this.setFormat()
+    },
+    setFormat () {
+      const width = this.width.toString() + 'px'
+      if (this.format === 'overlay') {
+        this.menuWidth = { 'width': width }
+      } else if (this.format === 'full') {
+        this.menuWidth = { 'width': '100%' }
+      } else {
+        this.menuWidth = { 'width': width }
+        if (this.direction === 'right') {
+          this.app.style.marginRight = width
+          this.app.style.transition = 'margin-right .5s'
+        } else {
+          this.app.style.marginLeft = width
+          this.app.style.transition = 'margin-left .5s'
+        }
       }
     },
     closeMenu () {
-      this.$refs.slider.style.width = '0'
-      this.$parent.$refs.app.style.marginLeft = '0'
-      this.$parent.$refs.app.style.marginRight = '0'
+      this.menuWidth = { 'width': 0 }
+      this.app.style.marginLeft = '0'
+      this.app.style.marginRight = '0'
       if (this.opacity) {
         document.body.style.backgroundColor = styles['background-color']
       }
