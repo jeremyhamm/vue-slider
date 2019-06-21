@@ -1,16 +1,16 @@
 <template>
   <div>
     <!-- Nav Links -->
-    <div ref="slider" class="sidenav">
+    <div ref="slider" class="sidenav" :style="direction === 'right' ? {'right': 0} : {'left': 0}">
       <a href="javascript:void(0)" class="closebtn" @click="closeMenu()">&times;</a>
       <a href="javascript:void(0)">Link 1</a>
       <a href="javascript:void(0)">Link 2</a>
       <a href="javascript:void(0)">Link 3</a>
     </div>
     <!-- Hamburger Menu -->
-    <nav ref="menuIcon" class="topnav">
+    <nav ref="menuIcon" class="topnav" :style="direction === 'right' ? {'float': 'right'} : {'float': 'left'}">
       <a href="javascript:void(0)" @click="openMenu()">
-        <svg width="30" height="30" id="icoOpen">
+        <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
           <path d="M0,14 30,14" :stroke="styles['menu-icon-color']" stroke-width="5"/>
           <path d="M0,23 30,23" :stroke="styles['menu-icon-color']" stroke-width="5"/>
@@ -52,25 +52,7 @@ export default {
       styles: styles
     }
   },
-  mounted () {
-    this.init()
-  },
   methods: {
-    init () {
-      if (this.direction === 'right') {
-        this.setRightMenu()
-      } else {
-        this.setLeftMenu()
-      }
-    },
-    setLeftMenu () {
-      this.$refs.slider.style.left = '0'
-      this.$refs.menuIcon.style.float = 'left'
-    },
-    setRightMenu () {
-      this.$refs.slider.style.right = '0'
-      this.$refs.menuIcon.style.float = 'right'
-    },
     openMenu () {
       if (this.opacity) {
         document.body.style.backgroundColor = utilities.hexToRGB(styles['background-color'], this.opacity)
@@ -115,6 +97,11 @@ export default {
     background-color: $background-color;
     transition: background-color .5s;
   }
+  #app {
+    transition: margin-left .5s;
+    transition: margin-right .5s;
+    padding: 20px;
+  }
   .sidenav {
     font-family: $font-family-sans-serif;
     height: 100%;
@@ -144,11 +131,6 @@ export default {
       font-size: 36px;
       margin-left: 50px;
     }
-  }
-  #app {
-    transition: margin-left .5s;
-    transition: margin-right .5s;
-    padding: 20px;
   }
   @media screen and (max-height: 450px) {
     .sidenav {
