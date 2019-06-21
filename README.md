@@ -44,7 +44,7 @@ export default {
 
 #### Use in component
 ```html
- <slider :width="300" format="push" direction="left" :opacity="0.15"></slider>
+ <slider :width="300" format="push" direction="left" :opacity="0.15" :links="[{'id': 1, 'text': 'Link 1', 'url': 'https://github.com'}, {'id': 2, 'text': 'Link 2', 'url': 'https://github.com'}]"></slider>
 ```
 
 #### Properties
