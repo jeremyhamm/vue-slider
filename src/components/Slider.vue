@@ -7,7 +7,7 @@
     </div>
     <!-- Hamburger Menu -->
     <nav ref="menuIcon" class="navIcon" :style="iconDirection">
-      <a href="javascript:void(0)" @click="toggleMenu()">
+      <a href="javascript:void(0)" @click="toggleMenu()" data-test-ref="navMenuLink">
         <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
           <path d="M0,14 30,14" :stroke="styles['menu-icon-color']" stroke-width="5"/>
@@ -83,19 +83,25 @@ export default {
         this.menuWidth = { 'width': '100%' }
       } else {
         this.menuWidth = { 'width': width }
-        if (this.direction === 'right') {
-          this.app.style.marginRight = width
-          this.app.style.transition = 'margin-right .5s'
+        if (this.app) {
+          if (this.direction === 'right') {
+            this.app.style.marginRight = width
+            this.app.style.transition = 'margin-right .5s'
+          } else {
+            this.app.style.marginLeft = width
+            this.app.style.transition = 'margin-left .5s'
+          }
         } else {
-          this.app.style.marginLeft = width
-          this.app.style.transition = 'margin-left .5s'
+          console.warn(`[Slider] The format was set to '${this.format}', but there is no element with an id 'app'. Add id='app' to the element to move.`)
         }
       }
     },
     closeMenu () {
       this.menuWidth = { 'width': 0 }
-      this.app.style.marginLeft = '0'
-      this.app.style.marginRight = '0'
+      if (this.app) {
+        this.app.style.marginLeft = '0'
+        this.app.style.marginRight = '0'
+      }
       if (this.opacity) {
         document.body.style.backgroundColor = styles['background-color']
       }
