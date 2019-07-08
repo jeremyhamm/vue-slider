@@ -7,7 +7,7 @@
     </div>
     <!-- Hamburger Menu -->
     <nav ref="menuIcon" class="navIcon" :style="iconDirection">
-      <a href="javascript:void(0)" @click="openMenu()">
+      <a href="javascript:void(0)" @click="toggleMenu()">
         <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
           <path d="M0,14 30,14" :stroke="styles['menu-icon-color']" stroke-width="5"/>
@@ -98,6 +98,13 @@ export default {
       this.app.style.marginRight = '0'
       if (this.opacity) {
         document.body.style.backgroundColor = styles['background-color']
+      }
+    },
+    toggleMenu () {
+      if (this.menuWidth.width === 0) {
+        this.openMenu()
+      } else {
+        this.closeMenu()
       }
     }
   }
