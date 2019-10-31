@@ -87,18 +87,16 @@ export default {
       const marginDirection = `margin-${this.direction}`
 
       this.menuWidth = {
-        'width': this.format === 'full'
-          ? '100%'
-          : width
+          'width': this.format === 'full' ? '100%' : width
+      }
+
+      if (this.app && this.format === 'push') {
+        this.app.style[marginDirection] = width
+        this.app.style.transition = `${marginDirection} .5s`
       }
 
       if (this.opacity) {
         document.body.style.background = utilities.hexToRGB(styles['background-color'], this.opacity)
-      }
-
-      if (this.app) {
-        this.app.style[marginDirection] = width
-        this.app.style.transition = `${marginDirection} .5s`
       }
     },
     closeMenu () {
