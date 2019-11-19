@@ -87,7 +87,7 @@ export default {
       const marginDirection = `margin-${this.direction}`
 
       this.menuWidth = {
-          'width': this.format === 'full' ? '100%' : width
+        'width': this.format === 'full' ? '100%' : width
       }
 
       if (this.app && this.format === 'push') {
