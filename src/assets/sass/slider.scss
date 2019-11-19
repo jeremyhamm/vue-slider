@@ -1,0 +1,47 @@
+body {
+  background: $background-color;
+  transition: background .5s;
+}
+#app {
+  transition: margin-left .5s;
+  transition: margin-right .5s;
+  padding: 20px;
+}
+.navMenu {
+  font-family: $font-family-sans-serif;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background: $menu-background;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $menu-text;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: $menu-text-hover;
+    }
+  }
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .navMenu {
+    padding-top: 15px;
+    a {
+      font-size: 18px;
+    }
+  }
+}

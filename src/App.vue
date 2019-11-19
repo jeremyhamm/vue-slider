@@ -26,7 +26,5 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    padding: 2em;
-  }
+  @import '@/assets/sass/app.scss';
 </style>
