@@ -2,7 +2,7 @@
   <div>
     <!-- Nav Links -->
     <nav class="navMenu" :style="[menuDirection, menuWidth]">
-      <a href="#" class="closebtn" @click.prevent="closeMenu">&times;</a>
+      <a href="javscript:void(0)" class="closebtn" @click.prevent="closeMenu">&times;</a>
       <template v-if="links.length">
         <a v-for="link in links" :key="link.id" :href="link.url">{{ link.text }}</a>
       </template>
@@ -10,7 +10,7 @@
     </nav>
     <!-- Hamburger Menu -->
     <nav class="navIcon" :style="iconDirection">
-      <a href="#" @click.prevent="toggleMenu" data-test-ref="navMenuLink">
+      <a href="javscript:void(0)" @click.prevent="toggleMenu" data-test-ref="navMenuLink">
         <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
           <path d="M0,14 30,14" :stroke="styles['menu-icon-color']" stroke-width="5"/>
