@@ -49,6 +49,7 @@
     "pre-commit": "^1.2.2",
     "sass": "^1.23.2",
     "sass-loader": "^8.0.0",
+    "serialize-javascript": ">=2.1.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   }
