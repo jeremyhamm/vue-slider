@@ -36,21 +36,21 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.5",
-    "@vue/cli-plugin-eslint": "^4.0.5",
-    "@vue/cli-plugin-unit-mocha": "^4.0.5",
-    "@vue/cli-service": "^4.0.5",
+    "@vue/cli-plugin-babel": "^4.4.4",
+    "@vue/cli-plugin-eslint": "^4.4.4",
+    "@vue/cli-plugin-unit-mocha": "^4.4.4",
+    "@vue/cli-service": "^4.4.4",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-vue": "^5.2.3",
     "pre-commit": "^1.2.2",
-    "sass": "^1.23.2",
-    "sass-loader": "^8.0.0",
-    "serialize-javascript": ">=2.1.1",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "serialize-javascript": "^4.0.0",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   }
 }
