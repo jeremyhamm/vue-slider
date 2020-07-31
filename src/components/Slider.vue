@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- Nav Links -->
-    <nav class="navMenu" :style="[menuDirection, menuWidth]">
+    <nav class="navMenu" :style="[userStyles.navMenu, menuDirection, menuWidth]">
       <a href="javscript:void(0)" class="closebtn" @click.prevent="closeMenu">&times;</a>
       <template v-if="links.length">
-        <a v-for="link in links" :key="link.id" :href="link.url">{{ link.text }}</a>
+        <a v-for="link in links" :key="link.id" :href="link.url" :style="link.styles">{{ link.text }}</a>
       </template>
       <slot v-else />
     </nav>
     <!-- Hamburger Menu -->
-    <nav class="navIcon" :style="iconDirection">
+    <nav class="navIcon" :style="[userStyles.navIcon, iconDirection]">
       <a href="javscript:void(0)" @click.prevent="toggleMenu" data-test-ref="navMenuLink">
         <svg width="30" height="30">
           <path d="M0,5 30,5" :stroke="styles['menu-icon-color']" stroke-width="5"/>
@@ -53,14 +53,31 @@ export default {
       type: Array,
       required: false,
       default: () => ([])
+    },
+    customStyles: {
+      type: Object,
+      required: false,
+      deep: true,
+      default: () => ({})
     }
   },
   data () {
+    const defaultStyles = {
+      'navMenu': {},
+      'navIcon': {}
+    }
+
     return {
       styles: styles,
       menuWidth: {
         'width': 0
-      }
+      },
+      userStyles: Object.assign({}, defaultStyles, this.customStyles)
+    }
+  },
+  watch: {
+    customStyles () {
+      this.userStyles = Object.assign({}, this.userStyles, this.customStyles)
     }
   },
   computed: {
