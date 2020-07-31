@@ -30,4 +30,30 @@ describe('Slider.vue', () => {
     // check to make sure the menu is closed
     expect(wrapper.vm.menuWidth.width).to.equal(0)
   })
+
+  it('has proper user defined styles', () => {
+    const wrapper = shallowMount(Slider, {
+      propsData: {
+        width: 200,
+        links: [{
+          id: 1,
+          text: 'Link 1',
+          url: 'https://github.com'
+        }],
+        customStyles: {
+          'navMenu': {
+            'background-color': 'black'
+          }
+        }
+      }
+    })
+
+    const expectedUserStyles = {
+      'navMenu': {
+        'background-color': 'black'
+      },
+      'navIcon': {}
+    }
+    expect(wrapper.vm.userStyles).to.deep.equal(expectedUserStyles)
+  })
 })
