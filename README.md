@@ -20,7 +20,7 @@
 
 ***
 
-## Useage
+## Usage
 
 #### Mount with global
  ```javascript
@@ -55,6 +55,7 @@ export default {
 | direction | `String` | `left`    | `left, right`          |
 | opacity   | `Number` | `0`       | `0.00 - 1.00` Representing [css opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)        |
 | links     | `Array`  | null      | `[{'id': 1, 'text': 'Link 1', 'url': 'https://github.com'}, {'id': 2, 'text': 'Link 2', 'url': 'https://github.com'}]` |
+| customStyles | `Object` | `{}`   | `{'navMenu': {'background-color': 'black'}, 'navIcon': {'color': 'blue'}}` |
 
 #### Styles
 All menu styles can be updated in `/assets/sass/variables.scss`
